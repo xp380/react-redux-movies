@@ -7,13 +7,11 @@ import "./MainPage.css";
 
 const { Content, Footer } = Layout;
 const MainPage = (props) => {
-  const { all_movies, apiMovies, favorite_movies } = props;
+  const { all_movies, apiMovies } = props;
 
-  console.log("demo", all_movies);
-  console.log("pkp", favorite_movies);
   useEffect(() => {
     apiMovies();
-  }, []);
+  }, [all_movies, apiMovies]);
 
   return (
     <Router>
